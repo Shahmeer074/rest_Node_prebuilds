@@ -1,0 +1,21 @@
+the schema is like table  like categories and sub-categories
+
+in controller we define the functions that which our searches (filter)
+for examples
+
+getallusers
+getallposts
+editallusers
+editallpost
+deleteallusers
+
+
+routes
+
+in route we difine the url(basically URI's) 
+
+www.example.com/(getallusers)
+www.example.com/(getallposts)
+www.example.com/(editallusers)
+www.example.com/(deleteallusers)
+www.example.com/(editallusers)

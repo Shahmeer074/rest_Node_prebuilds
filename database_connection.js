@@ -2,6 +2,7 @@ const express = require("express");
 const mongoose = require("mongoose");
 const cors = require("cors");
 const dotenv = require("dotenv");
+const routes = require("./Routes");
 
 const app = express();
 dotenv.config();
@@ -16,6 +17,9 @@ const connectDB = async () => {
         console.log("Error come from database connection", err);
     }
 };
+
+//come from routes(index.js) folder we
+app.use('/api',routes);
 
 //PORT
 const port = process.env.PORT || 3001;

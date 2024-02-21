@@ -1,0 +1,24 @@
+cat
+const express = require('express');
+const router = express.Router();
+const categoryController = require('../controllers/categoryController');
+
+router.get('/', categoryController.getAllCategories);
+router.get('/:id', categoryController.getCategoryById);
+router.post('/', categoryController.createCategory);
+router.delete('/:id', categoryController.deleteCategoryById);
+router.get('/name/:name', categoryController.getCategoryByName);
+
+module.exports = router;
+
+
+subcat
+
+const express = require('express');
+const router = express.Router();
+const subcategoryController = require('../controllers/subcategoryController');
+
+router.get('/category/:categoryId', subcategoryController.getSubcategoriesByCategory);
+router.get('/name/:name', subcategoryController.getSubcategoriesByName);
+
+module.exports = router;
